@@ -68,6 +68,7 @@ class Play extends Phaser.Scene {
     }
 
     update() {
+        //check for game over
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyR)){
             this.scene.restart();
         }
@@ -81,6 +82,7 @@ class Play extends Phaser.Scene {
             this.ship02.update();
             this.ship03.update();
         }
+
 
         // check collisions
         if (this.checkCollision(this.p1Rocket, this.ship03)) {
